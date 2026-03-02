@@ -124,6 +124,7 @@ const CAT_META = {
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 // ─── SAMPLE DATA ─────────────────────────────────────────────────────────────
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
 const SEED_TRANSACTIONS = [
   // January
   { id:1,  date:"12-Jan", merchant:"Swiggy",   amount:450,  category:"Food Delivery",  month:"Jan" },
