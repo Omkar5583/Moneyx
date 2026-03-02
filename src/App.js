@@ -124,6 +124,7 @@ const CAT_META = {
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 // ─── SAMPLE DATA ─────────────────────────────────────────────────────────────
+// eslint-disable-next-line
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
 const SEED_TRANSACTIONS = [
   // January
