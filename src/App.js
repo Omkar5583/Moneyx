@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
-  AreaChart, Area, BarChart, Bar, LineChart, Line,
+  AreaChart, Area, BarChart, Bar,
   XAxis, YAxis, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, RadialBarChart, RadialBar
+  PieChart, Pie, Cell
 } from "recharts";
 
 // ─── FONTS & GLOBAL STYLES ───────────────────────────────────────────────────
@@ -274,7 +274,6 @@ function Landing({ onStart, onDemo }) {
 // ─── SETUP WIZARD ─────────────────────────────────────────────────────────────
 function SetupWizard({ onComplete, onBack }) {
   const [step, setStep] = useState(0);
-  const [phone, setPhone] = useState("");
   const [wa, setWa] = useState("");
   const [budgets, setBudgets] = useState({ "Food Delivery":4000, Shopping:5000, Subscriptions:600 });
   const [alertDay, setAlertDay] = useState("Monday");
@@ -412,7 +411,7 @@ function Loading() {
   useEffect(() => {
     const t = setInterval(() => setMsgIdx(i => Math.min(i+1, msgs.length-1)), 600);
     return () => clearInterval(t);
-  }, []);
+ }, [msgs.length]);
   return (
     <div style={{ minHeight:"100vh", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:28 }}>
       <div style={{ position:"relative", width:72, height:72 }}>
